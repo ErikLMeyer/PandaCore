@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "Calendar project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikLMeyer/PandaCore.git"
+  },
+  "keywords": [
+    "calendar"
+  ],
+  "author": "Ren Gernes, Erik Meyer, Matt Spreitzer, Carter Burzlaff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ErikLMeyer/PandaCore/issues"
+  },
+  "homepage": "https://github.com/ErikLMeyer/PandaCore#readme"
+}
