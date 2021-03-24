@@ -2,9 +2,9 @@
   "name": "pandacore",
   "version": "1.0.0",
   "description": "Calendar project",
-  "main": "PandaCore.js",
+  "main": "pandaCore.js",
   "scripts": {
-    "test": "node PandaCore.js"
+    "test": "node pandaCore.js"
   },
   "repository": {
     "type": "git",
