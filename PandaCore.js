@@ -19,6 +19,16 @@ app.get('/', (req,res) => res.render('pandaCore'));
 
 app.get('/proposal', (req, res) => res.render('final-project-PandaCore'));
 
+app.use((req, res) => {
+    res.status(404);
+    res.render('404');
+})
+
+app.use((err, req, res, next) => {
+    console.error(err.message);
+    res.status(500);
+    res,render('500');
+})
 
 app.listen(port, () => console.log(`server started on port ${port}; ` +
     'press Ctrl-C to terminate....'))
