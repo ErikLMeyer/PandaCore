@@ -2,7 +2,7 @@
   "name": "pandacore",
   "version": "1.0.0",
   "description": "Calendar project",
-  "main": "index.js",
+  "main": "PandaCore.js",
   "scripts": {
     "test": "node PandaCore.js"
   },
