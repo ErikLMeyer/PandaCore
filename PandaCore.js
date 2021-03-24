@@ -15,9 +15,9 @@ app.engine('handlebars', expressHandelbars({
 }))
 app.set('view engine', 'handlebars');
 
-app.get('/', (req,res) => res.render('index'));
+app.get('/', (req,res) => res.render('pandaCore'));
 
-app.get('/proposal', (req, res) => res.render('pandacore'));
+app.get('/proposal', (req, res) => res.render('final-project-PandaCore'));
 
 
 app.listen(port, () => console.log(`server started on port ${port}; ` +
