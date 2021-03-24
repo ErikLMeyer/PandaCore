@@ -4,13 +4,13 @@
 */
 
 const express = require('express');
-const expressHandelbars = require('express-handlebars');
+const expressHandlebars = require('express-handlebars');
 const app = express();
 const port = process.env.PORT || 3000
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/PandaCore'));
 
-app.engine('handlebars', expressHandelbars({
+app.engine('handlebars', expressHandlebars({
     defaultLayout: 'main',
 }))
 app.set('view engine', 'handlebars');
