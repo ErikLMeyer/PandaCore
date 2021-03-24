@@ -24,11 +24,11 @@ app.use((req, res) => {
     res.render('404');
 })
 
-app.use((err, req, res, next) => {
+/* app.use((err, req, res, next) => {
     console.error(err.message);
     res.status(500);
     res,render('500');
-})
+}) */
 
 app.listen(port, () => console.log(`server started on port ${port}; ` +
     'press Ctrl-C to terminate....'))
