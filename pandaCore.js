@@ -31,5 +31,6 @@ app.use((err, req, res, next) => {
     res,render('500');
 })
 
-app.listen(port, () => console.log(`server started on port ${port}; ` +
+app.listen(port, () => console.log(
+    `Express started on port http://localhost:${port}; ` +
     'press Ctrl-C to terminate....')) 
