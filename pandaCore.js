@@ -13,7 +13,6 @@ app.use(express.static(__dirname + '/public'));
 app.engine('handlebars', expressHandlebars({
     defaultLayout: 'main',
 }))
-
 app.set('view engine', 'handlebars');
 
 app.get('/', (req,res) => res.render('pandaCore'));
