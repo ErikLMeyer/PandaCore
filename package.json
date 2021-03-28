@@ -4,7 +4,7 @@
   "description": "Calendar project",
   "main": "index.js",
   "scripts": {
-    "test": "node pandaCore.js"
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
