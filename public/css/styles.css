@@ -67,6 +67,14 @@ body, *{
 	float:right;
 }
 
+.calendar .view-swap-btn {
+	margin: 0;
+	left: 50%;
+	position: absolute;
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
 .calendar .calendar-dates .days .day {
 	float:left;
 	color: #B22222;

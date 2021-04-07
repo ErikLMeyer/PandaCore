@@ -15,7 +15,13 @@ app.engine('handlebars', expressHandlebars({
 }))
 app.set('view engine', 'handlebars');
 
-app.get('/', (req,res) => res.render('pandaCore'));
+app.get('/', (req,res) => res.render('monthly'));
+
+app.get('/monthly', (req,res) => res.render('monthly'));
+
+app.get('/weekly', (req,res) => res.render('weekly'));
+
+app.get('/daily', (req,res) => res.render('daily'));
 
 app.get('/proposal', (req, res) => res.render('final-project-PandaCore'));
 

@@ -1,5 +1,6 @@
 var months = ["January", "February", "March", "April", "May", "June", "July",
  "August", "September", "October", "November", "December"];
+var views = ["Monthly", "Weekly", "Daily"];
 var startYear = 2021;
 var endYear = 2099;
 var month = 0;
@@ -47,6 +48,8 @@ function genYears() {
 	}
 }							
 
+// TODO: edit function to display only week of current day
+// Possible TODO: add arrows to go forward, backward a week
 function genDays() {
 	document.getElementById("calendarDays").innerHTML = "";
 
@@ -80,14 +83,40 @@ function daysInMonth(month, year) {
 	var d = new Date(year, month+1, 0);
 	return d.getDate();
 }
+
+function genViews() {
+	for (var i = 0; i < views.length; i++) {
+		var doc = document.createElement("div");
+		doc.innerHTML = views[i];
+		doc.classList.add("dropdown-item");
+		
+		doc.onclick = (function () {
+			var selectedView = i;
+			return function () {
+				view = selectedView;
+				document.getElementById("curView").innerHTML = views[view];
+				// gen new view on click -- make functions for this
+				// if select monthly genMonths
+				// if select weekly, genWeeks
+				// if select daily, genDays
+				return view;
+			}
+		})();
+		
+		document.getElementById("views").appendChild(doc);
+	}
+}
 		
 window.addEventListener('load', function () {
 	var date = new Date();
 	month = date.getMonth();
 	year = date.getFullYear();
+	view = views[0];
 	document.getElementById("curMonth").innerHTML = months[month];
 	document.getElementById("curYear").innerHTML = year;
+	document.getElementById("curView").innerHTML = view;
 	genMonths();
 	genYears();
 	genDays();
+	genViews();
 });
