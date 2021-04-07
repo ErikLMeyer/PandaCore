@@ -21,9 +21,11 @@ body, *{
 	padding-bottom: 5px;
 	padding-left: 30px;
 	padding-right: 30px;
+	height: 1000%;
 	width: 160px;
 	left: 0px;
 	z-index: 2000;
+	overflow-y: scroll;
 }
 
 .calendar .dropdown .dropdown-item {
