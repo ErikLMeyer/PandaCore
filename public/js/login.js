@@ -54,7 +54,3 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 
 });
-
-document.getElementById("signin").onclick = function () {
-  location.href = "www.yoursite.com";
-};
