@@ -22,6 +22,8 @@ function signup(){
 
     const promise = auth.createUserWithEmailAndPassword(email,password);
     promise.catch(e => alert(e.message));
+
+    location.href = "/loggedin";
     //alert("signed up");
 }
 
@@ -32,6 +34,8 @@ function signin(){
 
   const promise = auth.signInWithEmailAndPassword(email,password);
   promise.catch(e => alert(e.message));
+
+  location.href = "/loggedin";
   //alert("signed in");
 }
 
@@ -42,6 +46,7 @@ function signout(){
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+    
     var email = user.email;
     alert("logged in " + email)
   } else {
@@ -49,3 +54,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 
 });
+
+document.getElementById("signin").onclick = function () {
+  location.href = "www.yoursite.com";
+};
