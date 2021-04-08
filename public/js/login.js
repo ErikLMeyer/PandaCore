@@ -18,12 +18,17 @@ const auth = firebase.auth();
 function signup(){
     var email = document.getElementById("email").value;
     var password = document.getElementById("pass").value;
+    
+    try {
+        const promise = auth.createUserWithEmailAndPassword(email,password);
+        promise.catch(e => alert(e.message));
 
-
-    const promise = auth.createUserWithEmailAndPassword(email,password);
-    promise.catch(e => alert(e.message));
-
-    location.href = "/loggedin";
+        location.href = "/loggedin";
+    } catch (error) {
+         console.error(error);
+         alert("error signing up");
+  }
+    
     //alert("signed up");
 }
 
@@ -31,11 +36,17 @@ function signin(){
   var email = document.getElementById("email").value;
   var password = document.getElementById("pass").value;
 
-
+try {
   const promise = auth.signInWithEmailAndPassword(email,password);
   promise.catch(e => alert(e.message));
-
   location.href = "/loggedin";
+} catch (error) {
+  console.error(error);
+  alert("error signing in");
+}
+  
+
+  
   //alert("signed in");
 }
 
