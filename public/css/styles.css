@@ -95,7 +95,7 @@ body, *{
 }
 
 .calendar .calendar-dates .days .day.selected {
-	background-color: #1caff6;
+	background-color: #B22222;
 	color: white;
 	cursor:pointer;
 	opacity: .5;
