@@ -98,31 +98,11 @@ function genDays() {
 }
 
 function genSelectedDay() {
-	var curMonth = document.getElementById("curMonth").innerHTML
-	var curYear = document.getElementById("curYear").innerHTML
-	var selectedDays = localStorage.getItem("selectedDays").split(",");
-	
-	// potentially protects against case where user enters nothing
-	if (selectedDays.length == 0) {
-		selectedDays.push(15);
-	}
-
-	var lenArray = (selectedDays.length) - 1;
-	var selected = new Date(curYear, months.indexOf(curMonth), parseInt(selectedDays[lenArray]));
-	
-	var selectedDayOfWeek = selected.getDay(); // gets what day of week the selected day is 
-
-
-	var d = document.createElement("div"); // create div object for date box
-	d.id = "calendarday_" + 4; // identifies date box as calendarday_i
-	d.className = "day"; // defines class to be day
-	d.innerHTML = selectedDayOfWeek; // actual date that gets put into box
-
-	document.getElementById("selectedDay").appendChild(d);
+	document.getElementById("dayNumber").innerHTML = 
 }
 
 function genDaysInWeek() {
-	document.getElementById("daysInWeek").innerHTML = "";
+	document.getElementById("daysInWeek").innerHTML = localStorage.getItem("selectedDays");
 	
 	var tmpDate = new Date(year, month, 0); // Date object of last day of prev month selected
 	var num = daysInMonth(month, year);		// 30 -- number of days in April
