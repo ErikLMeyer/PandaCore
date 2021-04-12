@@ -97,6 +97,15 @@ function genDays() {
 	document.getElementById("calendarDays").appendChild(clear);
 }
 
+function genSelectedDay() {
+	var d = document.createElement("div"); // create div object for date box
+	d.id = "calendarday_" + i; // identifies date box as calendarday_i
+	d.className = "day"; // defines class to be day
+	d.innerHTML = selectedDays[0]; // actual date that gets put into box
+
+	document.getElementById("selectedDay").appendChild(d);
+}
+
 function genDaysInWeek() {
 	document.getElementById("daysInWeek").innerHTML = "";
 	
