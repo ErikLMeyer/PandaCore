@@ -97,14 +97,23 @@ function genDays() {
 	document.getElementById("calendarDays").appendChild(clear);
 }
 
-function genSelectedDay() {
-	var d = document.createElement("div"); // create div object for date box
-	d.id = "calendarday_" + i; // identifies date box as calendarday_i
-	d.className = "day"; // defines class to be day
-	d.innerHTML = selectedDays[0]; // actual date that gets put into box
+// function genSelectedDay() {
+// 	var curMonth = document.getElementById("curMonth").innerHTML
+// 	var curYear = document.getElementById("curYear").innerHTML
+// 	var selectedDays = localStorage.getItem("selectedDays").split(",");
+	
+// 	// potentially protects against case where user enters nothing
+// 	if (selectedDays.length == 0) {
+// 		selectedDays.push(15);
+// 	}
 
-	document.getElementById("selectedDay").appendChild(d);
-}
+// 	var d = document.createElement("div"); // create div object for date box
+// 	d.id = "calendarday_" + 4; // identifies date box as calendarday_i
+// 	d.className = "day"; // defines class to be day
+// 	d.innerHTML = selectedDays[0]; // actual date that gets put into box
+
+// 	document.getElementById("selectedDay").appendChild(d);
+// }
 
 function genDaysInWeek() {
 	document.getElementById("daysInWeek").innerHTML = "";
