@@ -78,7 +78,7 @@ body, *{
 	transform: translateX(-50%);
 }
 
-.calendar .calendar-dates .days .day {
+.calendar .calendar-dates .days .day .event {
 	float:left;
 	color: #B22222;
 	width: 12%;
