@@ -85,7 +85,6 @@ function genDays() {
             else
                 selectedDays.splice(selectedDays.indexOf(this.dataset.day), 1);
 			
-			localStorage.setItem("currentSelected", this.dataset.day);
 			localStorage.setItem("selectedDays", selectedDays);
         });
         /* **************************************************** */
@@ -99,7 +98,7 @@ function genDays() {
 }
 
 function genSelectedDay() {
-	document.getElementById("dayNumber").innerHTML = localStorage.getItem("currentSelected");
+	document.getElementById("dayNumber").innerHTML = localStorage.getItem("selectedDays")
 }
 
 function genDaysInWeek() {
