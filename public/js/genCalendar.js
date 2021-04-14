@@ -203,7 +203,5 @@ window.addEventListener('load', function () {
 		genDays();
 	} else if (url.includes("weekly")) {
 		genDaysInWeek();
-	} else if (url.includes("daily")) {
-		genSelectedDay();
 	}
 });
