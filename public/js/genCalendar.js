@@ -98,11 +98,11 @@ function genDays() {
 }
 
 function genSelectedDay() {
-	document.getElementById("dayNumber").innerHTML = localStorage.getItem("selectedDays")
+	document.getElementById("dayNumber").innerHTML = 
 }
 
 function genDaysInWeek() {
-	document.getElementById("daysInWeek").innerHTML = "";
+	document.getElementById("daysInWeek").innerHTML = localStorage.getItem("selectedDays");
 	
 	var tmpDate = new Date(year, month, 0); // Date object of last day of prev month selected
 	var num = daysInMonth(month, year);		// 30 -- number of days in April
