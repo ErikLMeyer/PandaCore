@@ -1,3 +1,22 @@
+<head>	
+	<!-- Style Sheet -->
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	
+	<script src="/js/genCalendar.js"></script>
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js%22%3E"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js%22%3E"></script>
+
+	<!-- Google's jquery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<script src="/js/configureFirebase.js"></script>
+</head>
+
 <body>
 	<div class="calendar" id="calendar">
 		<div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
@@ -12,15 +31,19 @@
 
 		<div class="clear"></div>
 
-
-        <div id="selectedDay" class="days">
-			<div id = "dayNumber">Today's events</div>
-			<div class="event">
-				<p>Event time:</p>
-				<p> </p>
-				<p>Event Details:</p>
-				<p> </p>
+		<div class="calendar-dates">
+			<div class="days">
+				<div class="day label">Sunday</div>
+				<div class="day label">Monday</div>
+				<div class="day label">Tuesday</div>
+				<div class="day label">Wednesday</div>
+				<div class="day label">Thursday</div>
+				<div class="day label">Friday</div>
+				<div class="day label">Saturday</div>
+				<div class="clear"></div>
 			</div>
-		</div>	
-	</div>
+
+        <div id="calendarDays" class="days"></div>
+		</div>
+	</div>	
 </body>

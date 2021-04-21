@@ -23,11 +23,7 @@ app.get('/weekly', (req,res) => res.render('weekly'));
 
 app.get('/daily', (req,res) => res.render('daily'));
 
-app.get('/proposal', (req, res) => res.render('final-project-PandaCore', {layout: null}));
-
-app.get('/login', (req, res) => res.render('login', {layout: 'loginLayout'}));
-
-app.get('/loggedin', (req, res) => res.render('loggedin'));
+app.get('/proposal', (req, res) => res.render('final-project-PandaCore'));
 
 app.use((req, res) => {
     res.status(404);
